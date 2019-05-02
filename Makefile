@@ -16,7 +16,7 @@ run:
 	@$(DOCKER) run -it --rm --name $(IMAGE) $(REGISTRY)/$(IMAGE):$(VERSION)
 
 push: build
-        @$(DOCKER) push $(REGISTRY)/$(IMAGE):$(VERSION)
+	@$(DOCKER) push $(REGISTRY)/$(IMAGE):$(VERSION)
 
 pull:
 	@$(DOCKER) login $(REGISTRY)
