@@ -1,6 +1,6 @@
 REGISTRY   = hex0cter
 IMAGE      = nodejs
-VERSION    = latest
+VERSION    = 12.2.0
 DOCKER     = $(shell docker info >/dev/null 2>&1 && echo "docker" || echo "sudo docker")
 
 all: build
@@ -9,6 +9,7 @@ build:
 	@$(DOCKER) build \
 	--pull \
 	--rm \
+	--build-arg NODE_VERION=${VERSION} \
 	--tag $(REGISTRY)/$(IMAGE):$(VERSION) \
 	.
 
