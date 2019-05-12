@@ -1,6 +1,6 @@
-REGISTRY   = hex0cter
+REGISTRY  ?= hex0cter
 IMAGE      = nodejs
-VERSION    = 12.2.0
+VERSION   ?= 12.2.0
 DOCKER     = $(shell docker info >/dev/null 2>&1 && echo "docker" || echo "sudo docker")
 
 all: build
@@ -16,7 +16,7 @@ build:
 run:
 	@$(DOCKER) run -it --rm --name $(IMAGE) $(REGISTRY)/$(IMAGE):$(VERSION)
 
-push: build
+push:
 	@$(DOCKER) push $(REGISTRY)/$(IMAGE):$(VERSION)
 
 pull:

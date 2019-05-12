@@ -1,15 +1,13 @@
 # docker-nodejs
-[![Build Status](https://travis-ci.org/hex0cter/docker-nodejs.svg?branch=master)](https://travis-ci.org/hex0cter/docker-nodejs)
-
 A docker image that contains nodejs and focuses on size. The image is based on alpine.
 
 ## Supported `nodejs` version:
-  - "7.10.1"
-  - "8.16.0"
-  - "9.11.2"
-  - "10.15.3"
-  - "11.15.0"
-  - "12.2.0"
+  - 7.10.1
+  - 8.16.0
+  - 9.11.2
+  - 10.15.3
+  - 11.15.0
+  - 12.2.0
 
 ## How to use
 To pull the image, just run
