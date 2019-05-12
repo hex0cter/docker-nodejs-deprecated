@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - "10.15.3"
+  - "12.2.0"
+before_install:
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+install:
+    - NODE_VERSION=$(node --version) make install
+    - NODE_VERSION=$(node --version) make push
