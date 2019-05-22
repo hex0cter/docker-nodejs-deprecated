@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ARG NODE_VERION
+ENV NODE_VERION=10.15.3
 RUN apk --no-cache update && \
     apk add python gcc g++ make linux-headers && \
     wget --quiet https://nodejs.org/download/release/v${NODE_VERION}/node-v${NODE_VERION}.tar.gz && \
